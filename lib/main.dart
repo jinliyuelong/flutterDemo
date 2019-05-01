@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'dart:io';
 
 import 'layout/basicsLayout.dart';
-
 import 'navigation/navigationPractice.dart';
 import 'utils/utility.dart';
 void main() {
@@ -44,8 +43,6 @@ class MyHomeScreen extends StatelessWidget {
                     builder: (context) => MyNavigationPractice(),
                   ));
             }),
-
-            
           ],
         ),
     );

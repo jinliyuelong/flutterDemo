@@ -3,6 +3,7 @@ import 'package:helloworld/utils/utility.dart';
 import '1.main的nav1.dart';
 import '1.main的nav2传递参数1.dart';
 import '1main的nav传递回传数据.dart';
+import 'bottom_navigation/bottom_navigation_widget.dart';
 
 class MyNavigationPractice extends StatelessWidget {
   @override
@@ -30,6 +31,13 @@ class MyNavigationPractice extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => MyRetunParamsFirstPage(),
+                  ));
+            }),
+             getLines('底部tab', context: context,ontap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BottomNavigationWidget(),
                   ));
             })
           ],
