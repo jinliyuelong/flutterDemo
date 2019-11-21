@@ -18,7 +18,8 @@ class MyImage extends StatelessWidget {
                 repeat: ImageRepeat.repeatY,
               ),
               // alignment: Alignment.center,
-              width: 500,
+
+              width: MediaQuery.of(context).size.width,
               height: 400,
               color: Colors.red,
               // padding: const EdgeInsets.all(10.0),
@@ -30,6 +31,7 @@ class MyImage extends StatelessWidget {
               ),
               // padding: const EdgeInsets.all(10.0),
             ),
+            
           ],
         )),
    

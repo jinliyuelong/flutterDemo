@@ -11,7 +11,7 @@ import '8.main的Stack布局.dart';
 import '9.main的卡片组件.dart';
 import '10.main的官方demo.dart';
 import 'package:helloworld/utils/utility.dart';
-
+import '2.main中的button.dart';
 class MyBasicLayoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -40,6 +40,13 @@ class MyBasicLayoutScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => MyImage(),
+                  ));
+            }), 
+            getLines('Button学习', context: context,ontap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MyButton(),
                   ));
             }),
              getLines('纵向tabvliew', context: context,ontap: () {
