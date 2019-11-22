@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:io';
-
+import '特效/特效home.dart';
 import 'layout/basicsLayout.dart';
 import 'navigation/navigationPractice.dart';
 import 'utils/utility.dart';
 void main() {
   runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'flutter学习demo',
-      theme: ThemeData.light(),
+      // title: 'flutter学习demo',
+      // theme: ThemeData.light(),
       home: MyHomeScreen(),
     ));
     // 以下两行 设置android状态栏为透明的沉浸。写在组件渲染之后，是为了在渲染后进行set赋值，覆盖状态栏，写在渲染之前MaterialApp组件会覆盖掉这个值。
@@ -25,6 +25,9 @@ class MyHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          flexibleSpace:FlexibleSpaceBar(
+          background: Image.asset('images/app_bar_hor.jpg', fit: BoxFit.cover), 
+        ) ,
           title: Text('flutter学习demo'),
         ),
         body: ListView(
@@ -41,6 +44,13 @@ class MyHomeScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => MyNavigationPractice(),
+                  ));
+            }),
+            getLines('特效的学习', context: context,ontap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SpecialEfficiencyViewList(),
                   ));
             }),
           ],

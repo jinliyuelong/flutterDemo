@@ -4,7 +4,8 @@ import '1.main的nav1.dart';
 import '1.main的nav2传递参数1.dart';
 import '1main的nav传递回传数据.dart';
 import 'bottom_navigation/bottom_navigation_widget.dart';
-
+import 'appbar/2.appbar详细.dart';
+import 'appbar/2.stefull组件.dart';
 class MyNavigationPractice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -38,6 +39,21 @@ class MyNavigationPractice extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => BottomNavigationWidget(),
+                  ));
+            }),
+            getLines('appbar问题', context: context,ontap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MyAppbar(),
+                  ));
+            }),
+            getLines('statefull组件', context: context,ontap: () {
+            
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CheckSwitchDemoPage(),
                   ));
             })
           ],
