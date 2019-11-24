@@ -35,10 +35,14 @@ class PersonList extends StatelessWidget {
             title: Text('数据：${list[index].name}'),
             onTap: () {
               print('${list[index].name}点击');
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => PersonDetail(person: list[index])));
+//              Navigator.push(
+//                  context,
+//                  MaterialPageRoute(
+//                      builder: (context) => PersonDetail(person: list[index])
+//                  )
+//
+//              );
+            Navigator.pushNamed(context, '/page_person',arguments: list[index]);
             },
           );
         },

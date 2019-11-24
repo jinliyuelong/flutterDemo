@@ -42,18 +42,26 @@ class _MyAppbarState extends State<MyAppbar>  with SingleTickerProviderStateMixi
         actions: <Widget>[
           PopupMenuButton(
               offset: Offset(50.0, 100.0),
-              onSelected: (val) => print('Selected item is $val'),
+              onSelected: (val) {
+                print('弹出内容$val');
+                Navigator.pop(context);
+              },
               icon: Icon(Icons.more_vert, color: Colors.red),
               itemBuilder: (context) =>
-                  List.generate(_abs.length, (index) => PopupMenuItem(value: _abs[index], child: Text(_abs[index]))))
+                  List.generate(_abs.length, (index) => PopupMenuItem(value: _abs[index],
+                      child: Text(_abs[index])
+                  ,
+                  )
+                  ))
         ],
         bottom: TabBar(
-            labelColor: Colors.red,
-            unselectedLabelColor: Colors.white,
+            labelColor: Colors.red,//// 选中时的颜色
+            unselectedLabelColor: Colors.white,//// 未选中颜色
             controller: _tabController,
-            isScrollable: false,
-            indicatorColor: Colors.yellow,
-            indicatorSize: TabBarIndicatorSize.tab,
+            isScrollable: false,// // 是否固定，当超过一定数量的 tab 时，如果一行排不下，可设置 true
+            indicatorColor: Colors.yellow,//// 导航的颜色
+            indicatorSize: TabBarIndicatorSize.tab,//// 导航样式，还有个选项是 TabBarIndicatorSize.label tab 时候，导航和 tab 同宽，label 时候，导航和 icon 同宽
+
             indicatorWeight: 5.0,
             tabs: List.generate(_abs.length, (index) => Tab(text: _abs[index], icon: Icon(Icons.android)))),
       ),

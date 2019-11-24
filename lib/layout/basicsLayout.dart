@@ -78,6 +78,15 @@ class MyBasicLayoutScreen extends StatelessWidget {
                     builder: (context) => MyGridView2(),
                   ));
             }),
+            getLines('gradViewDemo', context: context,ontap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GridViewDemoPage(),
+                  ));
+            }),
+
+
              getLines('row学习', context: context,ontap: () {
               Navigator.push(
                   context,
