@@ -65,7 +65,9 @@ class CustomScrollDemoPage extends StatelessWidget {
                       ],
                     ),
                     Divider(height: 2.0, color: Colors.black54),
-                  ], mainAxisAlignment: MainAxisAlignment.spaceBetween),
+                  ], 
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween
+                  ),
                   alignment: Alignment.center)),
           SliverFixedExtentList(
               delegate: SliverChildBuilderDelegate(

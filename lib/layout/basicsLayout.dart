@@ -13,6 +13,7 @@ import '10.main的官方demo.dart';
 import 'package:helloworld/utils/utility.dart';
 import '2.main中的button.dart';
 import '11.textfiled.dart';
+import '12.弹窗和提示.dart';
 class MyBasicLayoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -143,6 +144,12 @@ class MyBasicLayoutScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => MyTextFiled(),
+                  ));
+            }),getLines('弹窗和提示', context: context,ontap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PromptPageDemo(),
                   ));
             }),
           ],

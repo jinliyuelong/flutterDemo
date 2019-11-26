@@ -10,7 +10,7 @@ class MyColumn extends StatelessWidget {
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center, //副轴
-          mainAxisAlignment: MainAxisAlignment.start, //主轴
+          mainAxisAlignment: MainAxisAlignment.spaceBetween, //主轴
           children: <Widget>[
             Container(
                 color: Colors.redAccent,

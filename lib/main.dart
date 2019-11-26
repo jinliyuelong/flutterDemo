@@ -12,6 +12,8 @@ import 'package:helloworld/bloc/page/bloc_home.dart';
 import 'package:helloworld/bloc/count_bloc.dart';
 import 'package:helloworld/bloc/count_provider.dart';
 import 'package:provide/provide.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:helloworld/手势和动画/手势和动画目录.dart';
 void main() {
 
   final providers = Providers()
@@ -42,6 +44,11 @@ void main() {
     bloc: CountBlock(),
     child: MaterialApp(
       debugShowCheckedModeBanner: false,
+      supportedLocales: const [const Locale('zh')],
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate
+      ],
       // title: 'flutter学习demo',
       // theme: ThemeData.light(),
       onGenerateRoute: (setting) {
@@ -106,6 +113,13 @@ class MyHomeScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => BlocHomePage(),
+                ));
+          }),
+            getLines('手势和动画', context: context, ontap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => GuestureCatlog(),
                 ));
           }),
         ],
