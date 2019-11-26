@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+// import 'package:fluttertoast/fluttertoast.dart';
 
 class PromptPageDemo extends StatefulWidget {
   @override
@@ -127,7 +127,7 @@ class _PromptPageDemoState extends State<PromptPageDemo> {
                         child: Container(height: 40.0, child: Text(gender), alignment: Alignment.center),
                         onTap: () {
                           Navigator.pop(context);
-                          Fluttertoast.showToast(msg: '你选择的性别是 $gender');
+                          // Fluttertoast.showToast(msg: '你选择的性别是 $gender');
                         },
                       ))
                   .toList(),
