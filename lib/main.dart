@@ -14,11 +14,18 @@ import 'package:helloworld/bloc/count_provider.dart';
 import 'package:provide/provide.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:helloworld/手势和动画/手势和动画目录.dart';
-void main() {
+import 'package:helloworld/原理/原理homo.dart';
+import 'package:helloworld/数据持久化/数据持久化home.dart';
+import 'package:helloworld/网络/网络home.dart';
+import 'package:helloworld/application.dart';
+import 'package:helloworld/网络/http_utls.dart';
 
+void main() {
+  print('测试数据');
+   Application.http = HttpUtils('https://randomuser.me');
   final providers = Providers()
-  // 将我们创建的数据管理类，通过 Provider.function 方法转换成 Provider，
-  // 然后添加到 Providers 中
+    // 将我们创建的数据管理类，通过 Provider.function 方法转换成 Provider，
+    // 然后添加到 Providers 中
     ..provide(Provider.function((_) => CountProvider()));
   // 在 App 上层，通过包裹一层 ProvideNode，并将我们生成的 Providers 实例
   // 注册到 ProvideNode 中去，这样整个 App 都可以通过 Provide.value 查找相关的 Provider
@@ -53,8 +60,7 @@ void main() {
       // theme: ThemeData.light(),
       onGenerateRoute: (setting) {
         if (setting.name == '/page_person') {
-          return MaterialPageRoute(
-              builder: (context) => PersonDetail(person: setting.arguments));
+          return MaterialPageRoute(builder: (context) => PersonDetail(person: setting.arguments));
         }
       },
       home: MyHomeScreen(),
@@ -115,11 +121,32 @@ class MyHomeScreen extends StatelessWidget {
                   builder: (context) => BlocHomePage(),
                 ));
           }),
-            getLines('手势和动画', context: context, ontap: () {
+          getLines('手势和动画', context: context, ontap: () {
             Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => GuestureCatlog(),
+                ));
+          }),
+          getLines('原理', context: context, ontap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FundamentalsHomeWidget(),
+                ));
+          }),
+          getLines('数据持久化', context: context, ontap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DataPersistence(),
+                ));
+          }),
+          getLines('网络', context: context, ontap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => NetHomePage(),
                 ));
           }),
         ],

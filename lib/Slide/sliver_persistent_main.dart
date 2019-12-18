@@ -15,7 +15,8 @@ class SliverHeaderDemoPage extends StatelessWidget {
       SliverPersistentHeader(
         // 属性同 SliverAppBar
         pinned: true,
-        floating: true,
+        
+        floating: false,
         // 因为 SliverPersistentHeaderDelegate 是一个抽象类，所以需要自定义
         delegate: CustomSliverPersistentHeaderDelegate(
           max: 300.0,
@@ -45,7 +46,7 @@ class DemoHeader extends SliverPersistentHeaderDelegate {
     return Container(
         color: Colors.pink,
         alignment: Alignment.center,
-        child: Text('我是一个头部部件',
+        child: Text('我是一个头部部件123',
             style: TextStyle(color: Colors.white, fontSize: 30.0)));
   } // 头部展示内容
 

@@ -60,7 +60,7 @@ class _AnimationWidgetState extends State<AnimationWidget>
         title: Text('Animation Demo'),
       ),
       body: RunningHeart(
-        animations: [_colorAnimation, _scaleAnimation, _positionAnimation],
+        animations: [_colorAnimation,_scaleAnimation,_positionAnimation,],
         animationController: _animationController,
       ),
     );

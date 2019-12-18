@@ -24,7 +24,7 @@ class _StaggeredAnimationsDemoPageState extends State<StaggeredAnimationsDemoPag
   Future<void> _playAnim() async {
     try {
       await _controller.forward().orCancel;
-      // await _controller.reverse().orCancel;
+      await _controller.reverse().orCancel;
     } on TickerCanceled {
       print('cancel');
     }

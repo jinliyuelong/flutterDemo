@@ -15,15 +15,18 @@ class _CheckSwitchDemoPageState extends State<CheckSwitchDemoPage> {
   var _isTitleOn = false;
 
 
-
   @override
   void initState() {
     // widget.content;
     super.initState();
   }
 
+
+ 
   @override
   Widget build(BuildContext context) {
+
+    print('steflull context == ${context.runtimeType}');
     return Scaffold(
       appBar: AppBar(
         title: Text('Check Switch Demo'),

@@ -17,6 +17,9 @@ import '12.弹窗和提示.dart';
 class MyBasicLayoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    print('context type ==${context.runtimeType}');
+
     return Scaffold(
         appBar: AppBar(
           title: Text('flutter学习demo'),
