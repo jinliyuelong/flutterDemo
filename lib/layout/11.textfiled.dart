@@ -13,11 +13,14 @@ class _MyTextFiledState extends State<MyTextFiled> {
   // 监听输入内容变化的内容值
   String _spyContent = '';
 
+
+
   @override
   void initState() {
     super.initState();
     // 当输入框获取到焦点或者失去焦点的时候回调用
     _editNode.addListener(() {
+      
       print('edit has focus? => ${_editNode.hasFocus}');
     });
   }

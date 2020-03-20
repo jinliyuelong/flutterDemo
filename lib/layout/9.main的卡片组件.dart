@@ -1,3 +1,10 @@
+///
+/// Author: 1254463047@qq.com
+/// Date: 2019-11-21 21:01:30
+/// LastEditTime: 2020-03-08 15:37:52
+/// FilePath: /flutterDemo/lib/layout/9.main的卡片组件.dart
+/// Description: 
+///
 import 'package:flutter/material.dart';
 
 
@@ -18,7 +25,7 @@ class MyCardView extends StatelessWidget{
                 color: Colors.blue[500],
               ),
             ),
-            new Divider(),
+            new Divider(color: Colors.red,thickness: 1.0,indent: 10.0,endIndent: 10.0,),
             new ListTile(
               title: new Text('(408) 555-1212',
                   style: new TextStyle(fontWeight: FontWeight.w500)),

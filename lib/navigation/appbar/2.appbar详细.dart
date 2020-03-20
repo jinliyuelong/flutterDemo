@@ -34,6 +34,7 @@ class _MyAppbarState extends State<MyAppbar>  with SingleTickerProviderStateMixi
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         centerTitle: true,
 //        automaticallyImplyLeading: false,
 //        leading: Icon(Icons.menu, color: Colors.red, size: 30.0),
@@ -55,6 +56,7 @@ class _MyAppbarState extends State<MyAppbar>  with SingleTickerProviderStateMixi
                   ))
         ],
         bottom: TabBar(
+        
             labelColor: Colors.red,//// 选中时的颜色
             unselectedLabelColor: Colors.white,//// 未选中颜色
             controller: _tabController,

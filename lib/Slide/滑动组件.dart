@@ -11,6 +11,7 @@ import 'package:helloworld/Slide/nested_scroll_main.dart';
 class MySlideWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+ 
     return Scaffold(
       appBar: AppBar(title: Text('滑动组件的学习'),),
       body: ListView(

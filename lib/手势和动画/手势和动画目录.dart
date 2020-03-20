@@ -1,3 +1,10 @@
+///
+/// Author: 1254463047@qq.com
+/// Date: 2019-11-26 16:41:20
+/// LastEditTime: 2019-12-30 16:26:16
+/// FilePath: /flutterDemo/lib/手势和动画/手势和动画目录.dart
+/// Description: 
+///
 import 'package:flutter/material.dart';
 import 'package:helloworld/utils/utility.dart';
 import 'package:helloworld/手势和动画/手势demo.dart';

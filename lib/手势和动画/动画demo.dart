@@ -13,6 +13,7 @@ class _AnimationDemoPageState extends State<AnimationDemoPage> with TickerProvid
   Animation<Color> _colorAnimation; // 控制图标颜色
   Animation<Offset> _positionAnimation; // 控制图标位置
 
+
   @override
   void initState() {
     super.initState();
