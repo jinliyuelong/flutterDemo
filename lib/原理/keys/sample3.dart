@@ -49,8 +49,10 @@ class _Sample3State extends State<Sample3> {
     } else {
       list.add(Text('just text', textDirection: TextDirection.ltr));
     }
-    return Column(
+    return Scaffold(
+      appBar: AppBar(title: Text('原理的学习'),),
+      body:Column(
       children: list,
-    );
+    ));
   }
 }

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 ///
 /// Author: 1254463047@qq.com
 /// Date: 2020-03-28 23:21:36
-/// LastEditTime: 2020-03-28 23:21:37
+/// LastEditTime: 2020-03-28 23:44:07
 /// FilePath: /flutterDemo/lib/原理/keys/sample4.dart
 /// Description: 
 ///
@@ -38,7 +38,9 @@ class _Sample4State extends State<Sample4> {
         ),
       );
     }
-    return Column(
+    return Scaffold(
+      appBar: AppBar(title: Text('原理的学习'),),
+      body:Column(
       children: <Widget>[
         RaisedButton(
           child: Text(
@@ -54,6 +56,6 @@ class _Sample4State extends State<Sample4> {
         ),
         child
       ],
-    );
+    ));
   }
 }

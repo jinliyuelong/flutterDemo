@@ -26,7 +26,9 @@ class _Sample2State extends State<Sample2> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Scaffold(
+      appBar: AppBar(title: Text('原理的学习'),),
+      body:Column(
       children: <Widget>[
         RaisedButton(
           child: Text(
@@ -43,6 +45,6 @@ class _Sample2State extends State<Sample2> {
         cacheText,
         Text('no_cache_text', textDirection: TextDirection.ltr),
       ],
-    );
+    ));
   }
 }
