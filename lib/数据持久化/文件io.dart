@@ -127,7 +127,7 @@ class _DataPersistenceDemoPageState extends State<DataPersistenceDemoPage> {
       PermissionStatus status = await PermissionHandler().checkPermissionStatus(PermissionGroup.storage);
       if (status == PermissionStatus.granted)
         _writeContent();
-      else if (status == PermissionStatus.disabled)
+      else if (status == PermissionStatus.denied)
         Fluttertoast.showToast(msg: '未打开相关权限');
       else
         PermissionHandler().requestPermissions([PermissionGroup.storage]);
