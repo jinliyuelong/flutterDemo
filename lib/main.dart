@@ -19,7 +19,7 @@ import 'package:helloworld/数据持久化/数据持久化home.dart';
 import 'package:helloworld/网络/网络home.dart';
 import 'package:helloworld/application.dart';
 import 'package:helloworld/网络/http_utls.dart';
-
+import 'package:helloworld/三方库/三方库目录.dart';
 void main() {
   print('测试数据');
    Application.http = HttpUtils('https://randomuser.me');
@@ -147,6 +147,13 @@ class MyHomeScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => NetHomePage(),
+                ));
+          }),
+           getLines('三方库', context: context, ontap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ThirdHomePage(),
                 ));
           }),
         ],
